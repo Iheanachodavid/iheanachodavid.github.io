@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyLanding Page</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -19,33 +21,33 @@
         </nav>
     </header>
 
-    <section>
+    <section class="hero">
         <div>
             <h1>Hi, I'm David</h1>
             <p>
                 I'm a technology enthausiast building my skills across Cybersecurity, data analysis, and software development.
             </p>
 
-            <button>View My Project</button>
+            <a href="#projects"> View My Projects</a>
         </div>
 
-        <div> 
-            This is a place holder for an image
+        <div class="hero-image">
+            This is where my image will go
         </div>
     </section>
 
-    <section>
+    <section class="about">
         <h2>About Me</h2>
 
         <p>
-            I'm currently developing my skills in HTML, CSS, Javascript and eventually full-stack software development.
+           I have a background in Economics and have developed skills in cybersecurity and data analysis. I'm currently learning web development and working toward becoming a full-stack software developer.
         </p>
     </section>
 
-    <section>
+    <section class="skill">
         <h2>My Skills</h2>
 
-        <div>
+        <div class="skill-container">
 
             <div>
                 <h3>Cybersecurity</h3>
@@ -84,10 +86,10 @@
     
     </section>
 
-    <section>
+    <section id="projects" class="projects">
         <h2>My Projects</h2>
 
-        <div>
+        <div class="project-container">
 
             <div>
                 <h3> Odin Recipes</h3>
@@ -96,30 +98,33 @@
                 </p>
                 <button>View Project</button>
             </div>
-
         </div>
-        
-        <p>
-            The goal isn't to know everything. It's to keep learning and building.
-        </p>
-
-        <p>-David</p>
     </section>
 
-    <section>
+    <section class="quote"> 
+            <p>
+                The goal isn't to know everything. It's to keep learning and building.
+            </p>
+
+            <p>-David</p>
+
+    </section>
+
+    <section class="contact">
 
             <h2>let's Connect</h2>
 
             <p>
                Want to get in touch? You can find me here:
             </p>
+
             <a href="#">GitHub</a>
             <a href="#">LinkedIn</a>
             <a href="#">Email</a>
     </section>
 
-    <footer>
-        Copyright &copy; My Website 2026
+    <footer class="footer">
+        Copyright &copy; Iheanacho 2026
     </footer>
 </body>
 </html>

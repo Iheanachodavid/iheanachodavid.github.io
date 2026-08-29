@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #1f2937;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 80px;
+}
+
+header div {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 60px 80px
+}
+
+.hero {
+    background-color: #1f2937;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+}
+
+.hero p {
+    font-size: 14px;
+}
+.hero a {
+    background-color: #3882f6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+.hero-image {
+    width: 400px;
+    height: 200px;
+    background-color: #6b7280;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about h2 {
+    font-size: 36px;
+}
+
+.about p {
+    font-size: 18px;
+}
+.skill {
+    text-align: center;
+}
+.skill-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.skill-container> div {
+    border: 2px solid #3882f6;
+    width: 150px;
+    padding: 20px;
+    min-height: 120px;
+    text-align: center;
+}
+.projects {
+    text-align: center;
+    background-color: #d3d8d8;
+}
+.project-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.project-container >div {
+    width: 300;
+    padding: 20px;
+    border: 1px solid #d1d5db;
+}
+.project-container button {
+    background-color: #3882f6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+}
+.quote {
+    background-color: #e5e7eb;
+    padding: 80px 120px;
+}
+.quote p {
+    font-size: 24px;
+    font-style: italic;
+}
+.quote p:last-child {
+    text-align: right;
+    font-weight: bold;
+}
+.quote P:last-child {
+    font-size: 28px;
+    font-style: italic;
+}
+.contact  {
+    background-color: #3882f6;
+    color: #f7f8fa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+.footer {
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
