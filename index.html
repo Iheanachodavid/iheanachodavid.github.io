@@ -1,130 +1,425 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyLanding Page</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="David Iheanacho — Cybersecurity, Data Analysis and Web Development services.">
+  <title>David Iheanacho | Digital Solutions</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="top">
 
-    <header>
-        <div>Iheanacho</div>
+  <header class="header">
+    <a href="#top" class="brand">
+      <img src="david.jpeg" alt="" class="brand-photo" width="40" height="40">
+      <span class="logo">
+        <svg class="logo-script" viewBox="0 0 180 48" aria-hidden="true">
+          <path id="arc-header" d="M8 40 Q90 4 172 40" fill="none"></path>
+          <text>
+            <textPath href="#arc-header" startOffset="50%" text-anchor="middle">David</textPath>
+          </text>
+        </svg>
+        <span class="logo-last">IHEANACHO</span>
+        <span class="sr-only">David Iheanacho</span>
+      </span>
+    </a>
 
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Skills</a>
-            <a href="#">Projects</a>
-            <a href="#">Contact</a>
-        </nav>
-    </header>
+    <nav class="nav" id="nav">
+      <a href="#services">Services</a>
+      <a href="#skills">Skills</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="nav-button">Let's Talk</a>
+    </nav>
+
+    <button class="menu-button" id="menuButton" type="button" aria-label="Open navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <main>
 
     <section class="hero">
-        <div>
-            <h1>Hi, I'm David</h1>
-            <p>
-                I'm a technology enthausiast building my skills across Cybersecurity, data analysis, and software development.
-            </p>
-
-            <a href="#projects"> View My Projects</a>
+      <div class="hero-glow-left"></div>
+      <div class="hero-copy">
+        <div class="availability">
+          <span></span>
+          Available for projects
         </div>
-
-        <div class="hero-image">
-            This is where my image will go
-        </div>
-    </section>
-
-    <section class="about">
-        <h2>About Me</h2>
-
-        <p>
-           I have a background in Economics and have developed skills in cybersecurity and data analysis. I'm currently learning web development and working toward becoming a full-stack software developer.
+        <p class="eyebrow">DIGITAL SOLUTIONS</p>
+        <h1>I Build Digital Solutions</h1>
+        <p class="hero-description">
+          I combine cybersecurity, data analysis, and web development
+          to build practical solutions to real-world problems.
         </p>
-    </section>
-
-    <section class="skill">
-        <h2>My Skills</h2>
-
-        <div class="skill-container">
-
-            <div>
-                <h3>Cybersecurity</h3>
-                <p>
-                    Protecting systems and data from unauthorized access, breaches, and cyber threats.
-                </p>
-            </div>
-
-            <div>
-                <h3>Data Anakysis</h3>
-                <p>
-                    Collect, clean, and examine data to uncover patterns, trends, and insights that support informed decision-making.
-                </p>
-            </div>
-        
-            <div>
-                <h3>HTML</h3>
-                <p>Building the structure of websites.</p>
-            </div>
-
-            <div>
-                <h3>CSS</h3>
-                <p>Styling and designing websites.</p>
-            </div>
-
-            <div>
-                <h3>Flexbox</h3>
-                <p>Creating layouts and positioning elements.</p>
-            </div>
-
-            <div>
-                <h3>Git & Github</h3>
-                <p>Managing and sharing my code.</p>
-            </div>
+        <div class="hero-buttons">
+          <a href="#services" class="button primary">Explore my services <span>↗</span></a>
+          <a href="#work" class="button secondary">See my work</a>
         </div>
-    
-    </section>
-
-    <section id="projects" class="projects">
-        <h2>My Projects</h2>
-
-        <div class="project-container">
-
-            <div>
-                <h3> Odin Recipes</h3>
-                <p>
-                    My first HTML project from The Odin Project.
-                </p>
-                <button>View Project</button>
-            </div>
+        <div class="hero-stats">
+          <div><strong>03</strong><span>Core disciplines</span></div>
+          <div><strong>∞</strong><span>Learning mindset</span></div>
+          <div><strong>01</strong><span>Goal — solve problems</span></div>
         </div>
-    </section>
+      </div>
 
-    <section class="quote"> 
-            <p>
-                The goal isn't to know everything. It's to keep learning and building.
+      <div class="hero-visual" id="heroVisual">
+        <div class="visual-glow"></div>
+        <div class="portrait">
+          <img src="david.jpeg" alt="David Iheanacho" width="773" height="1026">
+          <div class="portrait-fade"></div>
+          <div class="portrait-name">
+            <p class="script">David</p>
+            <p class="last">IHEANACHO</p>
+          </div>
+        </div>
+        <div class="terminal" id="terminal">
+          <div class="terminal-top">
+            <div class="terminal-dots"><span></span><span></span><span></span></div>
+            <small>digital-solutions.js</small>
+          </div>
+          <div class="terminal-body">
+            <p><span class="purple">const</span> developer = {</p>
+            <p class="indent">name: <span class="green">'David'</span>,</p>
+            <p class="indent">focus: <span class="green">'Problem Solving'</span>,</p>
+            <p class="indent">services: [</p>
+            <p class="indent2"><span class="green">'Cybersecurity'</span>,</p>
+            <p class="indent2"><span class="green">'Data Analysis'</span>,</p>
+            <p class="indent2"><span class="green">'Web Development'</span></p>
+            <p class="indent">]</p>
+            <p>};</p>
+            <p class="cursor-line" id="cursorLine">
+              <span class="purple">await</span> buildSomethingGreat();
+              <span class="cursor"></span>
             </p>
-
-            <p>-David</p>
-
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="contact">
-
-            <h2>let's Connect</h2>
-
-            <p>
-               Want to get in touch? You can find me here:
-            </p>
-
-            <a href="#">GitHub</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Email</a>
+    <section class="section" id="services">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">WHAT I DO</p>
+          <h2>Services built around <span>your problems.</span></h2>
+        </div>
+        <p>
+          I don't just want to build things that look good.
+          I want to understand the problem first and create
+          something useful from it.
+        </p>
+      </div>
+      <div class="service-grid">
+        <article class="service-card">
+          <div class="service-number">01</div>
+          <h3>Cybersecurity Services</h3>
+          <p>Helping identify security weaknesses and improve the protection of systems, accounts and digital information.</p>
+          <ul>
+            <li>Security assessments</li>
+            <li>Security awareness</li>
+            <li>Basic vulnerability analysis</li>
+            <li>Security best practices</li>
+          </ul>
+          <a href="#contact">Discuss a security project →</a>
+        </article>
+        <article class="service-card featured">
+          <div class="service-number">02</div>
+          <h3>Data Analysis</h3>
+          <p>Turning raw data into understandable information that can help you make better decisions.</p>
+          <ul>
+            <li>Data cleaning</li>
+            <li>Exploratory analysis</li>
+            <li>Dashboards & visualisation</li>
+            <li>Business insights</li>
+          </ul>
+          <a href="#contact">Discuss a data project →</a>
+        </article>
+        <article class="service-card">
+          <div class="service-number">03</div>
+          <h3>Web Development</h3>
+          <p>Building responsive websites and digital experiences that are clean, fast and easy to use — from first layout to a live, maintainable site.</p>
+          <ul>
+            <li>Website Development</li>
+            <li>Responsive Web Design</li>
+            <li>Frontend Development</li>
+            <li>Git & GitHub</li>
+          </ul>
+          <a href="#contact">Start a web project →</a>
+        </article>
+      </div>
     </section>
 
-    <footer class="footer">
-        Copyright &copy; Iheanacho 2026
-    </footer>
+    <section class="section" id="skills">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">WHAT I CAN DO</p>
+          <h2>Skills I put to work on <span>every project.</span></h2>
+        </div>
+        <p>
+          Beyond the three service lanes, these are the concrete capabilities I
+          bring — from shipping a responsive site to keeping the work in Git.
+        </p>
+      </div>
+      <div class="skill-grid">
+        <article class="skill-card">
+          <h3>Website Development</h3>
+          <p>I plan, structure and build complete websites from the ground up — pages, navigation, content sections and calls to action — so visitors can find what they need and take the next step.</p>
+        </article>
+        <article class="skill-card">
+          <h3>Responsive Web Design</h3>
+          <p>Layouts that stay readable and usable on phones, tablets and desktops. I design mobile-first, keep tap targets comfortable, and avoid cramped or overflowing pages.</p>
+        </article>
+        <article class="skill-card">
+          <h3>Frontend Development</h3>
+          <p>Clean HTML, CSS and JavaScript (and modern React when it helps) for fast, accessible interfaces. I care about structure, performance and how the site actually feels to use.</p>
+        </article>
+        <article class="skill-card">
+          <h3>Git & GitHub</h3>
+          <p>Version control, clear commits, branches and GitHub workflows so projects stay organised, easy to share, and simple to iterate on over time.</p>
+        </article>
+        <article class="skill-card">
+          <h3>Cybersecurity Basics</h3>
+          <p>Practical security thinking: spotting weak spots, tightening accounts and systems, and explaining risks in plain language so you can act on them.</p>
+        </article>
+        <article class="skill-card">
+          <h3>Data Analysis</h3>
+          <p>Cleaning messy datasets, exploring patterns, and turning numbers into dashboards and insights you can actually use to decide what to do next.</p>
+        </article>
+        <article class="skill-card">
+          <h3>HTML, CSS & JavaScript</h3>
+          <p>The foundations I build on every day — semantic markup, thoughtful styling, and just enough interactivity to make a site feel alive without becoming fragile.</p>
+        </article>
+        <article class="skill-card">
+          <h3>Problem-first Delivery</h3>
+          <p>I start with the problem, not the stack. Economics trained me to look at trade-offs; technology is how I turn that thinking into something people can use.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">SELECTED WORK</p>
+          <h2>Things I've been <span>building.</span></h2>
+        </div>
+        <a href="#contact" class="text-link">Have a project? Let's talk →</a>
+      </div>
+      <div class="project-grid">
+        <article class="project-card project-large">
+          <div class="project-image project-one">
+            <div class="project-label">HTML / CSS</div>
+            <div class="browser">
+              <div class="browser-bar"></div>
+              <div class="browser-content">
+                <span class="fake-line large"></span>
+                <span class="fake-line"></span>
+                <span class="fake-line short"></span>
+                <div class="fake-boxes"><span></span><span></span><span></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div>
+              <p>WEB DEVELOPMENT</p>
+              <h3>Odin Recipes</h3>
+            </div>
+            <span class="arrow">↗</span>
+          </div>
+          <p>My first structured web development project, focused on HTML fundamentals and page structure.</p>
+        </article>
+        <article class="project-card">
+          <div class="project-image project-two">
+            <div class="data-chart">
+              <div class="chart-title">DATA OVERVIEW</div>
+              <div class="bars">
+                <span style="height:40%"></span>
+                <span style="height:70%"></span>
+                <span style="height:50%"></span>
+                <span style="height:90%"></span>
+                <span style="height:65%"></span>
+                <span style="height:80%"></span>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div>
+              <p>DATA ANALYSIS</p>
+              <h3>Data exploration</h3>
+            </div>
+            <span class="arrow">↗</span>
+          </div>
+          <p>Exploring datasets to discover patterns, trends and useful insights.</p>
+        </article>
+        <article class="project-card">
+          <div class="project-image project-three">
+            <div class="security-card">
+              <div class="shield">◆</div>
+              <p>SECURITY STATUS</p>
+              <strong>Protected</strong>
+              <div class="security-line"></div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div>
+              <p>CYBERSECURITY</p>
+              <h3>Security research</h3>
+            </div>
+            <span class="arrow">↗</span>
+          </div>
+          <p>Learning and documenting practical approaches to identifying and understanding security risks.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-photo">
+        <img src="david.jpeg" alt="Portrait of David Iheanacho" width="773" height="1026">
+        <div class="about-fade"></div>
+        <div class="about-tags">
+          <strong>Curious.</strong>
+          <strong>Analytical.</strong>
+          <strong>Always learning.</strong>
+        </div>
+      </div>
+      <div class="about-content">
+        <p class="eyebrow">A LITTLE ABOUT ME</p>
+        <h2>Technology is my way of <span>solving problems.</span></h2>
+        <p>My background in Economics taught me how to think analytically and understand problems from different perspectives.</p>
+        <p>I've taken that mindset into technology, where I'm developing skills across cybersecurity, data analysis and software development.</p>
+        <p>I'm particularly interested in the intersection between technology, business and problem solving.</p>
+        <a href="#contact" class="button primary">Work with me →</a>
+      </div>
+    </section>
+
+    <section class="section process">
+      <div class="section-heading centered">
+        <p class="eyebrow">HOW I WORK</p>
+        <h2>Simple process. <span>Clear results.</span></h2>
+      </div>
+      <div class="process-grid">
+        <div class="process-step">
+          <span>01</span>
+          <h3>Understand</h3>
+          <p>First, I understand your goals, requirements and the problem we're trying to solve.</p>
+        </div>
+        <div class="process-step">
+          <span>02</span>
+          <h3>Build</h3>
+          <p>I turn the requirements into a practical solution while keeping things simple and useful.</p>
+        </div>
+        <div class="process-step">
+          <span>03</span>
+          <h3>Improve</h3>
+          <p>We review the result, identify improvements and keep making the solution better.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="contact-glow"></div>
+      <div class="contact-inner">
+        <p class="eyebrow">LET'S CONNECT</p>
+        <h2>Tell me what you're building. <span>I'll help make it real.</span></h2>
+        <p class="contact-lead">Website, data, or security — drop a note. I usually reply within a day or two.</p>
+
+        <div class="contact-layout">
+          <form class="contact-form" id="contactForm">
+            <div class="form-inner">
+              <div class="form-head">
+                <h3>Send a message</h3>
+                <span class="open-badge"><span></span> Open to work</span>
+              </div>
+              <div class="form-row">
+                <label>
+                  <span>Name</span>
+                  <input type="text" name="name" required placeholder="Your name" autocomplete="name">
+                </label>
+                <label>
+                  <span>Email</span>
+                  <input type="email" name="email" required placeholder="you@email.com" autocomplete="email">
+                </label>
+              </div>
+              <fieldset>
+                <legend>I need help with</legend>
+                <div class="topics" id="topics">
+                  <button type="button" class="topic active" data-topic="Website">Website</button>
+                  <button type="button" class="topic" data-topic="Data analysis">Data analysis</button>
+                  <button type="button" class="topic" data-topic="Cybersecurity">Cybersecurity</button>
+                  <button type="button" class="topic" data-topic="Something else">Something else</button>
+                </div>
+              </fieldset>
+              <label>
+                <span>Message</span>
+                <textarea name="message" rows="5" required placeholder="What are you trying to solve?"></textarea>
+              </label>
+              <button type="submit" class="button primary form-submit">Open email to send <span>↗</span></button>
+              <p class="form-note" id="formNote">No account needed — this opens your mail app with the details filled in.</p>
+            </div>
+          </form>
+
+          <div class="contact-side">
+            <a class="channel" href="mailto:iheanachodavid@outlook.com">
+              <span class="channel-icon">✉</span>
+              <span>
+                <span class="channel-label">Email</span>
+                <strong>iheanachodavid@outlook.com</strong>
+                <span class="channel-hint">Best for new projects</span>
+              </span>
+            </a>
+            <a class="channel" href="https://github.com/Davenacho" target="_blank" rel="noreferrer">
+              <span class="channel-icon">⌘</span>
+              <span>
+                <span class="channel-label">GitHub</span>
+                <strong>Davenacho</strong>
+                <span class="channel-hint">Code & experiments</span>
+              </span>
+            </a>
+            <div class="channel muted">
+              <span class="channel-icon">in</span>
+              <span>
+                <span class="channel-label">LinkedIn</span>
+                <strong>Coming soon</strong>
+                <span class="channel-hint">Profile in progress</span>
+              </span>
+            </div>
+            <div class="direct">
+              <p class="channel-label">Direct line</p>
+              <p class="direct-email">iheanachodavid@outlook.com</p>
+              <p>Prefer to skip the form? Copy the address and write in your own words.</p>
+              <button type="button" class="button primary" id="copyEmail">Copy email</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <a href="#top" class="logo">
+        <svg class="logo-script" viewBox="0 0 180 48" aria-hidden="true">
+          <path id="arc-footer" d="M8 40 Q90 4 172 40" fill="none"></path>
+          <text>
+            <textPath href="#arc-footer" startOffset="50%" text-anchor="middle">David</textPath>
+          </text>
+        </svg>
+        <span class="logo-last">IHEANACHO</span>
+      </a>
+      <p>Building. Learning. Solving.</p>
+      <div class="socials">
+        <a href="https://github.com/Davenacho" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="#">LinkedIn</a>
+        <a href="mailto:iheanachodavid@outlook.com">Email</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Iheanacho. All rights reserved.</span>
+      <span>Built with HTML, CSS & JavaScript.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
