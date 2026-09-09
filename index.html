@@ -1,64 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="David Iheanacho — Cybersecurity, Data Analysis and Web Development services.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>David Iheanacho | Digital Solutions</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="David Iheanacho — Cybersecurity, Data Analysis and Web Development." />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body id="top">
-
-  <header class="header">
-    <a href="#top" class="brand">
-      <img src="david.jpeg" alt="" class="brand-photo" width="40" height="40">
-      <span class="logo">
-        <svg class="logo-script" viewBox="0 0 180 48" aria-hidden="true">
-          <path id="arc-header" d="M8 40 Q90 4 172 40" fill="none"></path>
-          <text>
-            <textPath href="#arc-header" startOffset="50%" text-anchor="middle">David</textPath>
-          </text>
-        </svg>
-        <span class="logo-last">IHEANACHO</span>
-        <span class="sr-only">David Iheanacho</span>
-      </span>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="wordmark" aria-label="David Iheanacho">
+      <span class="wordmark-first">David</span>
+      <span class="wordmark-rule"></span>
+      <span class="wordmark-last">Iheanacho</span>
     </a>
-
-    <nav class="nav" id="nav">
+    <nav id="nav">
       <a href="#services">Services</a>
       <a href="#skills">Skills</a>
       <a href="#work">Work</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
-      <a href="#contact" class="nav-button">Let's Talk</a>
+      <a class="nav-cta" href="#contact">Let's Talk</a>
     </nav>
-
-    <button class="menu-button" id="menuButton" type="button" aria-label="Open navigation" aria-expanded="false">
-      <span></span>
-      <span></span>
-    </button>
+    <button class="menu-btn" type="button" aria-label="Menu" data-menu>☰</button>
   </header>
 
   <main>
-
-    <section class="hero">
-      <div class="hero-glow-left"></div>
-      <div class="hero-copy">
-        <div class="availability">
-          <span></span>
-          Available for projects
-        </div>
+    <section class="hero" id="top">
+      <div>
+        <div class="pill"><span class="dot"></span> Available for projects</div>
         <p class="eyebrow">DIGITAL SOLUTIONS</p>
         <h1>I Build Digital Solutions</h1>
-        <p class="hero-description">
+        <p class="intro">
           I combine cybersecurity, data analysis, and web development
           to build practical solutions to real-world problems.
         </p>
-        <div class="hero-buttons">
-          <a href="#services" class="button primary">Explore my services <span>↗</span></a>
-          <a href="#work" class="button secondary">See my work</a>
+        <div class="hero-actions">
+          <a class="btn btn-fg" href="#services">Explore my services →</a>
+          <a class="btn btn-ghost" href="#work">See my work</a>
         </div>
-        <div class="hero-stats">
+        <div class="stats">
           <div><strong>03</strong><span>Core disciplines</span></div>
           <div><strong>∞</strong><span>Learning mindset</span></div>
           <div><strong>01</strong><span>Goal — solve problems</span></div>
@@ -66,33 +47,32 @@
       </div>
 
       <div class="hero-visual" id="heroVisual">
-        <div class="visual-glow"></div>
-        <div class="portrait">
-          <img src="david.jpeg" alt="David Iheanacho" width="773" height="1026">
-          <div class="portrait-fade"></div>
-          <div class="portrait-name">
-            <p class="script">David</p>
-            <p class="last">IHEANACHO</p>
-          </div>
+        <div class="hero-glow"></div>
+        <div class="portrait-card">
+          <img src="david.jpg" alt="Portrait of David Iheanacho" width="773" height="1026" />
+          <span class="wordmark sm">
+            <span class="wordmark-first">David</span>
+            <span class="wordmark-rule"></span>
+            <span class="wordmark-last">Iheanacho</span>
+          </span>
         </div>
         <div class="terminal" id="terminal">
-          <div class="terminal-top">
-            <div class="terminal-dots"><span></span><span></span><span></span></div>
+          <div class="terminal-bar">
+            <div class="dots"><span></span><span></span><span></span></div>
             <small>digital-solutions.js</small>
           </div>
           <div class="terminal-body">
-            <p><span class="purple">const</span> developer = {</p>
-            <p class="indent">name: <span class="green">'David'</span>,</p>
-            <p class="indent">focus: <span class="green">'Problem Solving'</span>,</p>
-            <p class="indent">services: [</p>
-            <p class="indent2"><span class="green">'Cybersecurity'</span>,</p>
-            <p class="indent2"><span class="green">'Data Analysis'</span>,</p>
-            <p class="indent2"><span class="green">'Web Development'</span></p>
-            <p class="indent">]</p>
+            <p><span class="kw">const</span> developer = {</p>
+            <p style="padding-left:24px">name: <span class="str">'David'</span>,</p>
+            <p style="padding-left:24px">focus: <span class="str">'Problem Solving'</span>,</p>
+            <p style="padding-left:24px">services: [</p>
+            <p style="padding-left:48px"><span class="str">'Cybersecurity'</span>,</p>
+            <p style="padding-left:48px"><span class="str">'Data Analysis'</span>,</p>
+            <p style="padding-left:48px"><span class="str">'Web Development'</span></p>
+            <p style="padding-left:24px">]</p>
             <p>};</p>
-            <p class="cursor-line" id="cursorLine">
-              <span class="purple">await</span> buildSomethingGreat();
-              <span class="cursor"></span>
+            <p style="margin-top:8px">
+              <span class="kw">await</span> <span id="typed"></span><span class="cursor-bar"></span>
             </p>
           </div>
         </div>
@@ -105,46 +85,42 @@
           <p class="eyebrow">WHAT I DO</p>
           <h2>Services built around <span>your problems.</span></h2>
         </div>
-        <p>
-          I don't just want to build things that look good.
-          I want to understand the problem first and create
-          something useful from it.
-        </p>
+        <p>I don't just want to build things that look good. I want to understand the problem first and create something useful from it.</p>
       </div>
-      <div class="service-grid">
-        <article class="service-card">
-          <div class="service-number">01</div>
+      <div class="cards-3">
+        <article class="service">
+          <div class="mono">01</div>
           <h3>Cybersecurity Services</h3>
           <p>Helping identify security weaknesses and improve the protection of systems, accounts and digital information.</p>
           <ul>
-            <li>Security assessments</li>
-            <li>Security awareness</li>
-            <li>Basic vulnerability analysis</li>
-            <li>Security best practices</li>
+            <li><span class="tick">✓</span> Security assessments</li>
+            <li><span class="tick">✓</span> Security awareness</li>
+            <li><span class="tick">✓</span> Basic vulnerability analysis</li>
+            <li><span class="tick">✓</span> Security best practices</li>
           </ul>
           <a href="#contact">Discuss a security project →</a>
         </article>
-        <article class="service-card featured">
-          <div class="service-number">02</div>
+        <article class="service featured">
+          <div class="mono">02</div>
           <h3>Data Analysis</h3>
           <p>Turning raw data into understandable information that can help you make better decisions.</p>
           <ul>
-            <li>Data cleaning</li>
-            <li>Exploratory analysis</li>
-            <li>Dashboards & visualisation</li>
-            <li>Business insights</li>
+            <li><span class="tick">✓</span> Data cleaning</li>
+            <li><span class="tick">✓</span> Exploratory analysis</li>
+            <li><span class="tick">✓</span> Dashboards & visualisation</li>
+            <li><span class="tick">✓</span> Business insights</li>
           </ul>
           <a href="#contact">Discuss a data project →</a>
         </article>
-        <article class="service-card">
-          <div class="service-number">03</div>
+        <article class="service">
+          <div class="mono">03</div>
           <h3>Web Development</h3>
-          <p>Building responsive websites and digital experiences that are clean, fast and easy to use — from first layout to a live, maintainable site.</p>
+          <p>Building responsive websites and digital experiences that are clean, fast and easy to use.</p>
           <ul>
-            <li>Website Development</li>
-            <li>Responsive Web Design</li>
-            <li>Frontend Development</li>
-            <li>Git & GitHub</li>
+            <li><span class="tick">✓</span> Website Development</li>
+            <li><span class="tick">✓</span> Responsive Web Design</li>
+            <li><span class="tick">✓</span> Frontend Development</li>
+            <li><span class="tick">✓</span> Git & GitHub</li>
           </ul>
           <a href="#contact">Start a web project →</a>
         </article>
@@ -157,44 +133,17 @@
           <p class="eyebrow">WHAT I CAN DO</p>
           <h2>Skills I put to work on <span>every project.</span></h2>
         </div>
-        <p>
-          Beyond the three service lanes, these are the concrete capabilities I
-          bring — from shipping a responsive site to keeping the work in Git.
-        </p>
+        <p>Beyond the three service lanes, these are the concrete capabilities I bring — from shipping a responsive site to keeping the work in Git.</p>
       </div>
-      <div class="skill-grid">
-        <article class="skill-card">
-          <h3>Website Development</h3>
-          <p>I plan, structure and build complete websites from the ground up — pages, navigation, content sections and calls to action — so visitors can find what they need and take the next step.</p>
-        </article>
-        <article class="skill-card">
-          <h3>Responsive Web Design</h3>
-          <p>Layouts that stay readable and usable on phones, tablets and desktops. I design mobile-first, keep tap targets comfortable, and avoid cramped or overflowing pages.</p>
-        </article>
-        <article class="skill-card">
-          <h3>Frontend Development</h3>
-          <p>Clean HTML, CSS and JavaScript (and modern React when it helps) for fast, accessible interfaces. I care about structure, performance and how the site actually feels to use.</p>
-        </article>
-        <article class="skill-card">
-          <h3>Git & GitHub</h3>
-          <p>Version control, clear commits, branches and GitHub workflows so projects stay organised, easy to share, and simple to iterate on over time.</p>
-        </article>
-        <article class="skill-card">
-          <h3>Cybersecurity Basics</h3>
-          <p>Practical security thinking: spotting weak spots, tightening accounts and systems, and explaining risks in plain language so you can act on them.</p>
-        </article>
-        <article class="skill-card">
-          <h3>Data Analysis</h3>
-          <p>Cleaning messy datasets, exploring patterns, and turning numbers into dashboards and insights you can actually use to decide what to do next.</p>
-        </article>
-        <article class="skill-card">
-          <h3>HTML, CSS & JavaScript</h3>
-          <p>The foundations I build on every day — semantic markup, thoughtful styling, and just enough interactivity to make a site feel alive without becoming fragile.</p>
-        </article>
-        <article class="skill-card">
-          <h3>Problem-first Delivery</h3>
-          <p>I start with the problem, not the stack. Economics trained me to look at trade-offs; technology is how I turn that thinking into something people can use.</p>
-        </article>
+      <div class="skills">
+        <article class="skill"><h3>Website Development</h3><p>I plan, structure and build complete websites from the ground up — pages, navigation, content sections and calls to action.</p></article>
+        <article class="skill"><h3>Responsive Web Design</h3><p>Layouts that stay readable on phones, tablets and desktops. Mobile-first, comfortable tap targets, no cramped pages.</p></article>
+        <article class="skill"><h3>Frontend Development</h3><p>Clean HTML, CSS and JavaScript for fast, accessible interfaces. Structure, performance, and how the site feels to use.</p></article>
+        <article class="skill"><h3>Git & GitHub</h3><p>Version control, clear commits, branches and GitHub workflows so projects stay organised and easy to iterate on.</p></article>
+        <article class="skill"><h3>Cybersecurity Basics</h3><p>Practical security thinking: spotting weak spots, tightening accounts and systems, and explaining risks in plain language.</p></article>
+        <article class="skill"><h3>Data Analysis</h3><p>Cleaning messy datasets, exploring patterns, and turning numbers into dashboards and insights you can actually use.</p></article>
+        <article class="skill"><h3>HTML, CSS & JavaScript</h3><p>The foundations I build on every day — semantic markup, thoughtful styling, and just enough interactivity.</p></article>
+        <article class="skill"><h3>Problem-first Delivery</h3><p>I start with the problem, not the stack. Economics trained me to look at trade-offs; technology is how I turn that into something people can use.</p></article>
       </div>
     </section>
 
@@ -204,222 +153,174 @@
           <p class="eyebrow">SELECTED WORK</p>
           <h2>Things I've been <span>building.</span></h2>
         </div>
-        <a href="#contact" class="text-link">Have a project? Let's talk →</a>
+        <a href="#contact" style="color:#b4a5ff;font-size:13px">Have a project? Let's talk →</a>
       </div>
-      <div class="project-grid">
-        <article class="project-card project-large">
-          <div class="project-image project-one">
-            <div class="project-label">HTML / CSS</div>
-            <div class="browser">
-              <div class="browser-bar"></div>
-              <div class="browser-content">
-                <span class="fake-line large"></span>
-                <span class="fake-line"></span>
-                <span class="fake-line short"></span>
-                <div class="fake-boxes"><span></span><span></span><span></span></div>
-              </div>
+
+      <a class="work-feature" href="budget.html">
+        <div class="work-visual">
+          <span class="badge">LIVE DEMO</span>
+          <div class="mini-dash">
+            <p class="mono">REMAINING THIS MONTH</p>
+            <p style="font-size:28px;font-weight:800;margin-top:4px">₦86,500</p>
+            <div class="bars">
+              <span style="height:72%"></span><span style="height:40%"></span><span style="height:55%"></span>
+              <span style="height:88%"></span><span style="height:30%"></span><span style="height:62%"></span>
             </div>
           </div>
-          <div class="project-info">
-            <div>
-              <p>WEB DEVELOPMENT</p>
-              <h3>Odin Recipes</h3>
-            </div>
-            <span class="arrow">↗</span>
-          </div>
-          <p>My first structured web development project, focused on HTML fundamentals and page structure.</p>
-        </article>
-        <article class="project-card">
-          <div class="project-image project-two">
-            <div class="data-chart">
-              <div class="chart-title">DATA OVERVIEW</div>
-              <div class="bars">
-                <span style="height:40%"></span>
-                <span style="height:70%"></span>
-                <span style="height:50%"></span>
-                <span style="height:90%"></span>
-                <span style="height:65%"></span>
-                <span style="height:80%"></span>
-              </div>
+        </div>
+        <div class="work-meta">
+          <div><small>WEB + DATA</small><h3>Pocket Ledger</h3></div>
+          <span>↗</span>
+        </div>
+        <p class="mono" style="margin-top:10px;font-size:13px;font-family:Manrope,sans-serif;color:var(--muted)">A personal finance tracker — log naira in and out, see the month, keep it in the browser.</p>
+      </a>
+
+      <div class="work-grid">
+        <a class="work-card" href="hiv.html">
+          <div class="work-visual teal" style="min-height:200px">
+            <span class="badge">LIVE BRIEF</span>
+            <div class="mini-dash">
+              <p class="mono">HIV IN NIGERIA</p>
+              <p style="font-size:28px;font-weight:800">1.89m</p>
+              <p class="mono">people living with HIV</p>
             </div>
           </div>
-          <div class="project-info">
-            <div>
-              <p>DATA ANALYSIS</p>
-              <h3>Data exploration</h3>
-            </div>
-            <span class="arrow">↗</span>
-          </div>
-          <p>Exploring datasets to discover patterns, trends and useful insights.</p>
-        </article>
-        <article class="project-card">
-          <div class="project-image project-three">
-            <div class="security-card">
-              <div class="shield">◆</div>
-              <p>SECURITY STATUS</p>
-              <strong>Protected</strong>
-              <div class="security-line"></div>
+          <div class="work-meta"><div><small>DATA ANALYSIS</small><h3>HIV in Nigeria</h3></div><span>↗</span></div>
+        </a>
+        <a class="work-card" href="csv.html">
+          <div class="work-visual teal" style="min-height:200px">
+            <span class="badge">LIVE DEMO</span>
+            <div class="mini-dash" style="text-align:center;border-style:dashed">
+              <p class="mono">DROP A SPREADSHEET</p>
+              <p style="font-size:22px;font-weight:800;margin-top:8px">CSV Explorer</p>
             </div>
           </div>
-          <div class="project-info">
-            <div>
-              <p>CYBERSECURITY</p>
-              <h3>Security research</h3>
+          <div class="work-meta"><div><small>DATA TOOL</small><h3>CSV Explorer</h3></div><span>↗</span></div>
+        </a>
+      </div>
+            <div class="work-grid" style="margin-top:24px">
+        <a class="work-card" href="scam.html">
+          <div class="work-visual" style="min-height:200px">
+            <span class="badge">LIVE DEMO</span>
+            <div class="mini-dash">
+              <p class="mono">MESSAGE 3 OF 8</p>
+              <p style="font-size:18px;font-weight:800;margin:8px 0">Safe or scam?</p>
+              <p class="mono">GTBank · WhatsApp · BVN</p>
             </div>
-            <span class="arrow">↗</span>
           </div>
-          <p>Learning and documenting practical approaches to identifying and understanding security risks.</p>
-        </article>
+          <div class="work-meta"><div><small>CYBERSECURITY</small><h3>Spot the Scam</h3></div><span>↗</span></div>
+        </a>
+        <a class="work-card" href="invoice.html">
+          <div class="work-visual teal" style="min-height:200px">
+            <span class="badge">LIVE DEMO</span>
+            <div class="mini-dash">
+              <p class="mono">INVOICE INV-001</p>
+              <p style="font-size:28px;font-weight:800">₦185,000</p>
+              <p class="mono">print or save as PDF</p>
+            </div>
+          </div>
+          <div class="work-meta"><div><small>WEB DEVELOPMENT</small><h3>Naira Invoice</h3></div><span>↗</span></div>
+        </a>
       </div>
     </section>
 
-    <section class="about" id="about">
+    <section class="section about" id="about">
       <div class="about-photo">
-        <img src="david.jpeg" alt="Portrait of David Iheanacho" width="773" height="1026">
-        <div class="about-fade"></div>
-        <div class="about-tags">
-          <strong>Curious.</strong>
-          <strong>Analytical.</strong>
-          <strong>Always learning.</strong>
+        <img src="david.jpg" alt="Portrait of David Iheanacho" />
+        <div class="tags">
+          <span>Curious.</span><span>Analytical.</span><span>Always learning.</span>
         </div>
       </div>
-      <div class="about-content">
+      <div>
         <p class="eyebrow">A LITTLE ABOUT ME</p>
-        <h2>Technology is my way of <span>solving problems.</span></h2>
-        <p>My background in Economics taught me how to think analytically and understand problems from different perspectives.</p>
-        <p>I've taken that mindset into technology, where I'm developing skills across cybersecurity, data analysis and software development.</p>
-        <p>I'm particularly interested in the intersection between technology, business and problem solving.</p>
-        <a href="#contact" class="button primary">Work with me →</a>
+        <h2 style="font-size:clamp(36px,5vw,60px);letter-spacing:-0.04em;margin-bottom:28px">
+          Technology is my way of <span class="accent">solving problems.</span>
+        </h2>
+        <p class="lede" style="max-width:600px;margin-bottom:16px">My background in Economics taught me how to think analytically and understand problems from different perspectives.</p>
+        <p class="lede" style="max-width:600px;margin-bottom:16px">I've taken that mindset into technology, where I'm developing skills across cybersecurity, data analysis and software development.</p>
+        <p class="lede" style="max-width:600px;margin-bottom:24px">I'm particularly interested in the intersection between technology, business and problem solving.</p>
+        <a class="btn btn-fg" href="#contact">Work with me →</a>
       </div>
     </section>
 
-    <section class="section process">
-      <div class="section-heading centered">
-        <p class="eyebrow">HOW I WORK</p>
-        <h2>Simple process. <span>Clear results.</span></h2>
-      </div>
-      <div class="process-grid">
-        <div class="process-step">
-          <span>01</span>
-          <h3>Understand</h3>
-          <p>First, I understand your goals, requirements and the problem we're trying to solve.</p>
-        </div>
-        <div class="process-step">
-          <span>02</span>
-          <h3>Build</h3>
-          <p>I turn the requirements into a practical solution while keeping things simple and useful.</p>
-        </div>
-        <div class="process-step">
-          <span>03</span>
-          <h3>Improve</h3>
-          <p>We review the result, identify improvements and keep making the solution better.</p>
-        </div>
+    <section class="section" style="text-align:center">
+      <p class="eyebrow">HOW I WORK</p>
+      <h2 style="font-size:clamp(32px,5vw,60px);margin-bottom:48px">Simple process. <span class="accent">Clear results.</span></h2>
+      <div class="steps">
+        <div class="step"><span class="mono" style="color:var(--primary)">01</span><h3>Understand</h3><p class="lede">First, I understand your goals, requirements and the problem we're trying to solve.</p></div>
+        <div class="step"><span class="mono" style="color:var(--primary)">02</span><h3>Build</h3><p class="lede">I turn the requirements into a practical solution while keeping things simple and useful.</p></div>
+        <div class="step"><span class="mono" style="color:var(--primary)">03</span><h3>Improve</h3><p class="lede">We review the result, identify improvements and keep making the solution better.</p></div>
       </div>
     </section>
 
-    <section class="contact" id="contact">
-      <div class="contact-glow"></div>
-      <div class="contact-inner">
-        <p class="eyebrow">LET'S CONNECT</p>
-        <h2>Tell me what you're building. <span>I'll help make it real.</span></h2>
-        <p class="contact-lead">Website, data, or security — drop a note. I usually reply within a day or two.</p>
-
-        <div class="contact-layout">
-          <form class="contact-form" id="contactForm">
-            <div class="form-inner">
-              <div class="form-head">
-                <h3>Send a message</h3>
-                <span class="open-badge"><span></span> Open to work</span>
-              </div>
-              <div class="form-row">
-                <label>
-                  <span>Name</span>
-                  <input type="text" name="name" required placeholder="Your name" autocomplete="name">
-                </label>
-                <label>
-                  <span>Email</span>
-                  <input type="email" name="email" required placeholder="you@email.com" autocomplete="email">
-                </label>
-              </div>
-              <fieldset>
-                <legend>I need help with</legend>
-                <div class="topics" id="topics">
-                  <button type="button" class="topic active" data-topic="Website">Website</button>
-                  <button type="button" class="topic" data-topic="Data analysis">Data analysis</button>
-                  <button type="button" class="topic" data-topic="Cybersecurity">Cybersecurity</button>
-                  <button type="button" class="topic" data-topic="Something else">Something else</button>
-                </div>
-              </fieldset>
-              <label>
-                <span>Message</span>
-                <textarea name="message" rows="5" required placeholder="What are you trying to solve?"></textarea>
-              </label>
-              <button type="submit" class="button primary form-submit">Open email to send <span>↗</span></button>
-              <p class="form-note" id="formNote">No account needed — this opens your mail app with the details filled in.</p>
+    <section class="section" id="contact">
+      <p class="eyebrow">CONTACT</p>
+      <h2 style="font-size:clamp(32px,5vw,58px);max-width:16ch;margin-bottom:40px">
+        Tell me what you're building. <span class="accent">I'll help make it real.</span>
+      </h2>
+      <div class="contact-grid">
+        <form class="panel" id="contactForm">
+          <h3>Send a message</h3>
+          <p class="lede" style="margin:8px 0 20px">No account needed — this opens your mail app with the details filled in.</p>
+          <label><span>Name</span><input name="name" required placeholder="Your name" autocomplete="name" /></label>
+          <div style="height:14px"></div>
+          <label><span>Email</span><input type="email" name="email" required placeholder="you@email.com" autocomplete="email" /></label>
+          <div style="height:14px"></div>
+          <div class="chips" id="topics">
+            <button type="button" class="chip on" data-topic="Website">Website</button>
+            <button type="button" class="chip" data-topic="Data analysis">Data analysis</button>
+            <button type="button" class="chip" data-topic="Cybersecurity">Cybersecurity</button>
+            <button type="button" class="chip" data-topic="Something else">Something else</button>
+          </div>
+          <div style="height:14px"></div>
+          <label><span>Message</span><textarea name="message" rows="5" required placeholder="What are you trying to solve?"></textarea></label>
+          <div style="height:18px"></div>
+          <button class="btn btn-fg" type="submit" style="width:100%">Open email to send</button>
+        </form>
+        <div>
+          <a class="channel" href="mailto:iheanachodavid@outlook.com">
+            <div>
+              <div class="mono">EMAIL</div>
+              <strong>iheanachodavid@outlook.com</strong>
+              <div class="mono">Best for new projects</div>
             </div>
-          </form>
-
-          <div class="contact-side">
-            <a class="channel" href="mailto:iheanachodavid@outlook.com">
-              <span class="channel-icon">✉</span>
-              <span>
-                <span class="channel-label">Email</span>
-                <strong>iheanachodavid@outlook.com</strong>
-                <span class="channel-hint">Best for new projects</span>
-              </span>
-            </a>
-            <a class="channel" href="https://github.com/Davenacho" target="_blank" rel="noreferrer">
-              <span class="channel-icon">⌘</span>
-              <span>
-                <span class="channel-label">GitHub</span>
-                <strong>Davenacho</strong>
-                <span class="channel-hint">Code & experiments</span>
-              </span>
-            </a>
-            <div class="channel muted">
-              <span class="channel-icon">in</span>
-              <span>
-                <span class="channel-label">LinkedIn</span>
-                <strong>Coming soon</strong>
-                <span class="channel-hint">Profile in progress</span>
-              </span>
+          </a>
+          <a class="channel" href="https://github.com/Davenacho" target="_blank" rel="noreferrer">
+            <div>
+              <div class="mono">GITHUB</div>
+              <strong>Davenacho</strong>
+              <div class="mono">Code & experiments</div>
             </div>
-            <div class="direct">
-              <p class="channel-label">Direct line</p>
-              <p class="direct-email">iheanachodavid@outlook.com</p>
-              <p>Prefer to skip the form? Copy the address and write in your own words.</p>
-              <button type="button" class="button primary" id="copyEmail">Copy email</button>
-            </div>
+          </a>
+          <div class="panel" style="background:linear-gradient(160deg,#1a1230,var(--surface));border-color:rgba(139,92,246,.28)">
+            <p class="mono" style="color:var(--primary)">DIRECT LINE</p>
+            <p style="font-size:20px;font-weight:700;margin:8px 0">iheanachodavid@outlook.com</p>
+            <button class="btn btn-fg" type="button" id="copyEmail">Copy email</button>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
+  <footer>
     <div class="footer-top">
-      <a href="#top" class="logo">
-        <svg class="logo-script" viewBox="0 0 180 48" aria-hidden="true">
-          <path id="arc-footer" d="M8 40 Q90 4 172 40" fill="none"></path>
-          <text>
-            <textPath href="#arc-footer" startOffset="50%" text-anchor="middle">David</textPath>
-          </text>
-        </svg>
-        <span class="logo-last">IHEANACHO</span>
+      <a href="index.html" class="wordmark sm" aria-label="David Iheanacho">
+        <span class="wordmark-first">David</span>
+        <span class="wordmark-rule"></span>
+        <span class="wordmark-last">Iheanacho</span>
       </a>
-      <p>Building. Learning. Solving.</p>
-      <div class="socials">
+      <p class="lede">Building. Learning. Solving.</p>
+      <div class="footer-links">
         <a href="https://github.com/Davenacho" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="#">LinkedIn</a>
+        <a href="#contact">LinkedIn</a>
         <a href="mailto:iheanachodavid@outlook.com">Email</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Iheanacho. All rights reserved.</span>
+      <span class="year"></span>
       <span>Built with HTML, CSS & JavaScript.</span>
     </div>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
