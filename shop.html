@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Secure the Shop — David Iheanacho</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="wordmark" aria-label="David Iheanacho">
+      <span class="wordmark-first">David</span>
+      <span class="wordmark-rule"></span>
+      <span class="wordmark-last">Iheanacho</span>
+    </a>
+    <nav id="nav">
+      <a href="index.html#work">Work</a>
+      <a href="#shop-contact">Talk</a>
+    </nav>
+    <button class="menu-btn" type="button" data-menu>☰</button>
+  </header>
+
+  <section class="page-hero">
+    <a class="back" href="index.html#work">← Back to work</a>
+    <p class="eyebrow">LIVE LANDING · CYBERSECURITY</p>
+    <p class="mono" style="margin-bottom:12px">SECURE THE SHOP</p>
+    <h1>Your shop is open. The scams never sleep.</h1>
+    <p class="lede" style="max-width:54ch">Fake invoices on WhatsApp. Staff tapping a link that looks like GTBank. One password on everything. I help small Nigerian businesses close the obvious holes before they eat a week of sales.</p>
+    <div class="hero-actions" style="margin-top:28px">
+      <a class="btn btn-fg" href="#shop-contact">Tell me what you run →</a>
+      <a class="btn btn-ghost" href="#holes">See the holes</a>
+    </div>
+  </section>
+
+  <div class="wrap" style="padding-bottom:40px">
+    <div class="panel" style="max-width:560px">
+      <p class="mono" style="color:var(--primary)">THIS WEEK’S TYPICAL HIT</p>
+      <p style="font-size:20px;font-weight:800;margin:12px 0">“Oga, printer account don change. Pay ₦185,000 today so they no hold the job.”</p>
+      <p class="lede">The real supplier did not send that. The number is new. The person who pays bills is busy. This is the job.</p>
+    </div>
+  </div>
+
+  <section class="section" id="holes">
+    <p class="eyebrow">THE HOLES</p>
+    <h2 style="font-size:clamp(28px,4vw,48px);margin-bottom:40px">Not Hollywood. <span class="accent">Just expensive.</span></h2>
+    <div class="cards-3">
+      <article class="skill"><h3>The invoice that is not from your supplier</h3><p>A WhatsApp that looks like your printer dealer or landlord. New account number. Pay today. The money does not come back.</p></article>
+      <article class="skill"><h3>The staff phone</h3><p>One tap on a “GTBank” link, and the POS, the business WhatsApp, or the Gmail is gone. Most shops lose access, not “get hacked by a genius”.</p></article>
+      <article class="skill"><h3>One password, three tools</h3><p>The same PIN on the bank app, the email, and the admin phone. When one leaks, the week of sales goes with it.</p></article>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="eyebrow">THE OFFER</p>
+    <h2 style="font-size:clamp(28px,4vw,48px);margin-bottom:16px">A checkup. A briefing. A quote in writing.</h2>
+    <p class="lede" style="max-width:54ch;margin-bottom:40px">I am not a bank. I will not “hack-proof” you. I will make the boring things true: the right people, the right approvals, the scams your staff will actually see.</p>
+    <div class="steps">
+      <div class="step"><span class="mono" style="color:var(--primary)">01</span><h3>Walk the shop</h3><p class="lede">We list what you actually use: POS, WhatsApp, mail, staff phones, the Wi-Fi. No theatre.</p></div>
+      <div class="step"><span class="mono" style="color:var(--primary)">02</span><h3>Close the obvious holes</h3><p class="lede">2FA, unique passwords, who can approve a transfer, how you confirm a new account number.</p></div>
+      <div class="step"><span class="mono" style="color:var(--primary)">03</span><h3>Brief the people</h3><p class="lede">Thirty minutes with whoever answers the business line. The scams they will see this month, in plain language.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="shop-contact">
+    <p class="eyebrow">TALK</p>
+    <h2 style="font-size:clamp(28px,4vw,48px);margin-bottom:32px">Tell me what the shop runs.</h2>
+    <div class="contact-grid">
+      <form class="panel" id="shopForm">
+        <label><span>Shop / business</span><input name="shop" required placeholder="e.g. Ada’s Provisions, Wuse" /></label>
+        <div style="height:12px"></div>
+        <label><span>Your name</span><input name="name" required /></label>
+        <div style="height:12px"></div>
+        <label><span>What you use</span><input name="tools" placeholder="POS, WhatsApp Business, Gmail…" /></label>
+        <div style="height:12px"></div>
+        <label><span>What happened, if anything</span><textarea name="note" rows="4"></textarea></label>
+        <div style="height:16px"></div>
+        <button class="btn btn-fg" type="submit" style="width:100%">Open email to send</button>
+      </form>
+      <div>
+        <a class="channel" href="mailto:iheanachodavid@outlook.com"><div><div class="mono">EMAIL</div><strong>iheanachodavid@outlook.com</strong></div></a>
+        <a class="channel" href="scam.html"><div><div class="mono">RELATED</div><strong>Spot the Scam — staff can practise</strong></div></a>
+        <p class="lede">Quote first. No scare-selling. Built as real work, not a mock.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-bottom"><span class="year"></span><span>A project by David Iheanacho.</span></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

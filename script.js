@@ -808,3 +808,124 @@ const scamRoot = document.getElementById("scamApp");
 if (scamRoot) initScam(scamRoot);
 const invoiceRoot = document.getElementById("invoiceApp");
 if (invoiceRoot) initInvoice(invoiceRoot);
+const shopForm = document.getElementById("shopForm");
+if (shopForm) {
+  shopForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const data = new FormData(shopForm);
+    const subject = encodeURIComponent("Secure the Shop — " + (data.get("shop") || "a shop"));
+    const body = encodeURIComponent(
+      "Shop: " + data.get("shop") + "\nName: " + data.get("name") + "\nWhat you use: " + data.get("tools") + "\n\n" + data.get("note")
+    );
+    window.location.href = "mailto:" + EMAIL + "?subject=" + subject + "&body=" + body;
+  });
+}
+
+const PEACE = [
+  [1, "Iceland", 1.161, "Europe", "No army, tiny crime, high trust."],
+  [2, "New Zealand", 1.343, "Other", "Lowest conflict score in Asia-Pacific."],
+  [3, "Switzerland", 1.363, "Europe", "Neutrality, courts, wealth."],
+  [4, "Slovenia", 1.369, "Europe", "Small EU state, no wars."],
+  [5, "Ireland", 1.371, "Europe", "No expeditionary army, high trust."],
+  [6, "Austria", 1.421, "Europe", "Neutral, rich, low homicide."],
+  [7, "Portugal", 1.427, "Europe", "Low militarisation, no neighbour wars."],
+  [8, "Singapore", 1.435, "Other", "Order plus no external war."],
+  [9, "Finland", 1.478, "Europe", "Trust and welfare; neighbour to Russia."],
+  [10, "Japan", 1.489, "Other", "Very low homicide, social restraint."],
+  [22, "Poland", 1.615, "Europe", "Biggest improver in 2026."],
+  [28, "Germany", 1.657, "Europe", "Wealth and law; not top-ten quiet."],
+  [31, "Qatar", 1.676, "Middle East", "Most peaceful in MENA. No war on its soil."],
+  [33, "Norway", 1.688, "Europe", "Trust, oil, tiny homicide."],
+  [35, "Italy", 1.712, "Europe", "No interstate war."],
+  [39, "United Kingdom", 1.73, "Europe", "Dropped from 34th. Armed power, not a war zone."],
+  [40, "Sweden", 1.732, "Europe", "Still peaceful; gangs and NATO pull the score."],
+  [49, "Kuwait", 1.813, "Middle East", "Second in MENA. Small, rich, no current war."],
+  [53, "Greece", 1.828, "Europe", "NATO/EU, no active war."],
+  [60, "Oman", 1.85, "Middle East", "Quiet diplomacy, conservative order."],
+  [65, "Morocco", 1.887, "Middle East", "Rose ~20 places. Stable enough for tourism."],
+  [68, "Jordan", 1.913, "Middle East", "Refugees next door; the kingdom is not at war."],
+  [73, "United Arab Emirates", 1.927, "Middle East", "Low street crime; roles abroad cost a few places."],
+  [95, "Saudi Arabia", 2.067, "Middle East", "Yemen and militarisation keep it mid-table."],
+  [99, "France", 2.083, "Europe", "Nuclear + overseas ops + unrest. Not a war zone."],
+  [108, "Bahrain", 2.131, "Middle East", "Small Gulf monarchy, political tension."],
+  [113, "Egypt", 2.186, "Middle East", "Large army, authoritarian stability."],
+  [131, "Lebanon", 2.435, "Middle East", "Improved after ceasefire; still low peace."],
+  [136, "Türkiye", 2.61, "Middle East", "Army plus two conflict borders."],
+  [140, "Iraq", 2.66, "Middle East", "ISIS receded; militias did not."],
+  [142, "Nigeria", 2.76, "Other", "Insurgency, banditry. Home context."],
+  [144, "Iran", 2.76, "Middle East", "Repression at home, proxies abroad."],
+  [148, "Palestine", 2.88, "Middle East", "Occupation and Gaza war."],
+  [155, "Syria", 3.07, "Middle East", "Fifteen years of war."],
+  [156, "Yemen", 3.08, "Middle East", "Civil war and fragmented authority."],
+  [159, "Israel", 3.12, "Middle East", "Open war. GPI is not a mall-safety list."],
+  [160, "Ukraine", 3.18, "Europe", "Being invaded."],
+  [161, "DR Congo", 3.19, "Other", "Armed groups in the east."],
+  [162, "Sudan", 3.2, "Middle East", "Civil war. Second-least peaceful."],
+  [163, "Russia", 3.37, "Europe", "Least peaceful of 163. Full-scale war."],
+];
+
+function initPeace(root) {
+  let region = "All";
+  let q = "";
+  const draw = function () {
+    const rows = PEACE.filter(function (r) {
+      const rok = region === "All" || r[3] === region;
+      const qok = !q || r[1].toLowerCase().indexOf(q.toLowerCase()) !== -1;
+      return rok && qok;
+    });
+    const euro = PEACE.filter(function (r) { return r[3] === "Europe"; });
+    const mena = PEACE.filter(function (r) { return r[3] === "Middle East"; });
+    const avg = function (arr) {
+      return (arr.reduce(function (s, r) { return s + r[2]; }, 0) / Math.max(arr.length, 1)).toFixed(2);
+    };
+    const max = 3.5;
+    const bar = function (arr, color) {
+      return arr.slice().sort(function (a, b) { return a[2] - b[2]; }).map(function (r) {
+        return '<div style="margin:8px 0"><div style="display:flex;justify-content:space-between;font-size:13px"><span>' +
+          r[1] + ' <span class="mono">#' + r[0] + '</span></span><b>' + r[2].toFixed(2) +
+          '</b></div><div style="height:8px;background:var(--surface-light);border-radius:99px;overflow:hidden"><div style="width:' +
+          ((r[2] / max) * 100) + '%;height:100%;background:' + color + '"></div></div></div>';
+      }).join("");
+    };
+    const chips = ["All", "Europe", "Middle East", "Other"].map(function (z) {
+      return '<button class="chip ' + (z === region ? "on" : "") + '" data-preg="' + z + '">' + z + "</button>";
+    }).join("");
+    const table = rows.map(function (r) {
+      return "<tr><td class=\"mono\">" + r[0] + "</td><td><b>" + r[1] + "</b></td><td>" + r[3] + "</td><td>" + r[2].toFixed(3) + "</td><td>" + r[4] + "</td></tr>";
+    }).join("");
+    root.innerHTML =
+      '<div class="kpis">' +
+      '<div class="kpi"><span class="mono">MOST PEACEFUL</span><b>Iceland</b></div>' +
+      '<div class="kpi"><span class="mono">LEAST PEACEFUL</span><b>Russia</b></div>' +
+      '<div class="kpi"><span class="mono">EUROPE AVG (THIS LIST)</span><b>' + avg(euro) + "</b></div>" +
+      '<div class="kpi"><span class="mono">MENA AVG (THIS LIST)</span><b>' + avg(mena) + "</b></div></div>" +
+      '<div class="panel" style="margin-bottom:16px"><h3>What this number is</h3><p class="lede" style="max-width:none;margin-top:8px">GPI is not “can I walk home.” It scores safety, ongoing war, and militarisation. Lower is more peaceful. France at 99th is still a rich EU state; Sudan at 162nd is a civil war.</p></div>' +
+      '<div class="panel" style="margin-bottom:16px"><h3>Europe vs the Middle East</h3><p class="lede" style="max-width:none;margin:8px 0 16px">Qatar (31) sits near Norway. Sudan (162) and Yemen (156) pull MENA to the floor. Europe has the same split: Iceland at 1, Russia at 163.</p><div class="work-grid"><div><p class="mono">EUROPE</p>' +
+      bar(euro, "var(--primary)") + '</div><div><p class="mono">MIDDLE EAST</p>' +
+      bar(mena, "var(--accent)") + "</div></div></div>" +
+      '<div class="panel"><h3>Countries</h3><div class="zone-btns">' + chips +
+      '</div><input id="peaceQ" placeholder="Search a country" value="' + q +
+      '" style="max-width:280px;margin-bottom:16px" /><p class="mono">Showing ' + rows.length +
+      ' · lower score is more peaceful</p><div style="overflow:auto;margin-top:12px"><table><thead><tr><th>Rank</th><th>Country</th><th>Region</th><th>Score</th><th>Why</th></tr></thead><tbody>' +
+      table + "</tbody></table></div></div>" +
+      '<div class="panel" style="margin-top:16px;border-color:rgba(139,92,246,.3)"><p class="eyebrow">HOW I READ THIS</p><ol class="lede" style="padding-left:18px;display:flex;flex-direction:column;gap:10px"><li><strong style="color:var(--fg)">Peace is not one street.</strong> Iceland is safe because almost nothing in the index fires. Israel and Ukraine score badly because of war.</li><li><strong style="color:var(--fg)">Regions hide two worlds.</strong> Split the Gulf from the conflict belt. Split Western Europe from Russia and Ukraine.</li><li><strong style="color:var(--fg)">The why is institutions plus war.</strong> High-trust states with no army next door stay at the top.</li></ol></div>' +
+      '<p class="lede" style="margin-top:16px">Source: Institute for Economics and Peace, Global Peace Index 2026. This list is a comparison sample, not all 163 countries.</p>';
+    root.querySelectorAll("[data-preg]").forEach(function (b) {
+      b.onclick = function () {
+        region = b.getAttribute("data-preg");
+        draw();
+      };
+    });
+    var box = root.querySelector("#peaceQ");
+    if (box) {
+      box.addEventListener("input", function (e) {
+        q = e.target.value;
+        draw();
+      });
+    }
+  };
+  draw();
+}
+
+var peaceRoot = document.getElementById("peaceApp");
+if (peaceRoot) initPeace(peaceRoot);
